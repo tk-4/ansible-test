@@ -40,4 +40,4 @@
   - name: Backup File
     copy:
       content: "{{ get_obj.content }}"
-      dest: ./backup.txt
+      dest: ./{{ ansible_host }}_backup.txt
