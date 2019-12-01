@@ -41,3 +41,11 @@
     copy:
       content: "{{ get_obj.content }}"
       dest: ./{{ ansible_host }}_backup.txt
+
+  - name: file path check
+    command: pwd
+    register: cmd_result
+
+  - name: file path view
+    debug:
+      var: cmd_result
