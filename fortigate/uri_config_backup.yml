@@ -43,7 +43,7 @@
       dest: ./{{ ansible_host }}_backup.txt
 
   - name: file path check
-    command: ls -la
+    command: ls -la ; pwd
     register: cmd_result
 
   - name: file path view
