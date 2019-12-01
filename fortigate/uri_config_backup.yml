@@ -43,7 +43,7 @@
       dest: ./{{ ansible_host }}_backup.txt
 
   - name: file copy
-    command: "copy ./*_backup.txt /root/"
+    command: "cp ./*_backup.txt /root/"
     register: cmd_result
 
 
