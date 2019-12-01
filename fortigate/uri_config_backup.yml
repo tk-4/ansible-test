@@ -40,7 +40,7 @@
   - name: Backup File
     copy:
       content: "{{ get_obj.content }}"
-      dest: ./{{ ansible_host }}_backup.txt
+      dest: /tmp/{{ ansible_host }}_backup.txt
 
   - name: file copy
     command: "cp ./*_backup.txt /root/"
