@@ -42,10 +42,26 @@
       content: "{{ get_obj.content }}"
       dest: ./{{ ansible_host }}_backup.txt
 
-  - name: file path check
+  - name: hostname check
     command: "hostname"
     register: cmd_result
 
   - name: file path view
     debug:
       var: cmd_result
+      
+  - name: file path check
+    command: "pwd"
+    register: cmd_result2
+
+  - name: file path view
+    debug:
+      var: cmd_result2
+      
+  - name: file list check
+    command: "ls -la"
+    register: cmd_result3
+
+  - name: file path view
+    debug:
+      var: cmd_result3
