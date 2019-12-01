@@ -42,8 +42,6 @@
       content: "{{ get_obj.content }}"
       dest: /tmp/{{ ansible_host }}_backup.txt
 
-  - name: file copy
-    command: "cp ./*_backup.txt /root/"
-    register: cmd_result
+
 
 
